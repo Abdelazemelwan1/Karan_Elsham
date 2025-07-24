@@ -18,7 +18,7 @@ export default function About() {
    AOS.init({duration: 1500})
   }, [])
   return <>
-    <div className=' max-w-[90%] sm:max-w-[36rem] md:max-w-[44rem] lg:max-w-[60rem]  xl:max-w-[74rem]  2xl:max-w-[82rem] container mx-auto'>
+    <div className='overflow-hidden max-w-[90%] sm:max-w-[36rem] md:max-w-[44rem] lg:max-w-[60rem]  xl:max-w-[74rem]  2xl:max-w-[82rem] container mx-auto'>
       <div className='text-center my-5'>
         <h1 className='font-normal text-[40px] text-[#202435]'>من نحن</h1>
         <p className='font-medium text-[18px] text-[#202435] max-w-[600px] mx-auto'> رحلة طهي استثنائية بدأت منذ أكثر من 15 عامًا، هدفها تقديم أفضل تجربة طعام تجمع بين النكهات الأصيلة والعرض العصري.</p>
