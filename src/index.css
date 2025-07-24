@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+    --font-myfonts:"Playfair Display", serif;
+}
+
+.active{
+    border-bottom: 4px solid #593015;
+    padding-bottom: 12px;
+    transition: all .3s;
+    font-weight: bold;
+}
+/* body{
+    height: 3000px;
+   
+} */
