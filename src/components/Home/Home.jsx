@@ -74,7 +74,7 @@ useEffect(() => {
                 </p>
               </div>
             </div>
-            <img className='w-full h-[350px] sm:w-44 sm:h-44 rounded-2xl [filter:blur(2.5px)] group-hover:blur-none [transition:all_.9s]' src={offer.image} alt="" />
+            <img className='w-full h-[350px] sm:w-44 sm:h-44 rounded-2xl [filter:blur(2.5px)] group-hover:blur-none [transition:all_.9s]' src={`http://localhost:3500/${offer.image}`} alt="" />
           </Link>
         </div>
           ))}
