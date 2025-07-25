@@ -11,7 +11,7 @@ export default function Layout() {
   return <>
     <ScrollRestoration />
    <NavBar/>
-   <div  className=' xxx  bg-[#F8B83A] shadow-2xl'>
+   <div  className=' xxx backdrop-blur-xl shadow-2xl'>
       <NasvLink/>
     </div>
    <Outlet/>
