@@ -44,9 +44,14 @@ useEffect(() => {
       <h2 className='text-[#9f6a00]'>العروض</h2>
     </div>
     <div className='bg-[#DBB466] mt-4 pt-1 pb-7'>
-      <div className="container max-w-[90%]   sm:max-w-[36rem] md:max-w-[45rem] lg:max-w-[62rem]  xl:max-w-[74rem]  2xl:max-w-[88rem]  mx-auto mt-[70px]">
+      <div className='text-center my-2'>
+        <h1 className='font-normal text-[40px] text-[#202435]'>قائمة الطعام المميزة</h1>
+        <p className='font-medium text-[18px] text-[#202435] max-w-[460px] mx-auto'>استمتع بأشهى المأكزلات المحضّرة بأجود المكونات  تحت درجة حرارة صحية.
+        </p>
+      </div>
+      <div className="container max-w-[90%]   sm:max-w-[36rem] md:max-w-[45rem] lg:max-w-[62rem]  xl:max-w-[74rem]  2xl:max-w-[88rem]  mx-auto mt-[20px]">
         {/* <h3>العروض</h3> */}
-        <div className='flex flex-col md:grid md:grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-4'>
+        <div className='flex flex-col md:grid md:grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-4 pt-1'>
           {offers.map((offer) => (
 
 
@@ -74,7 +79,7 @@ useEffect(() => {
                 </p>
               </div>
             </div>
-            <img className='w-full h-[350px] sm:w-44 sm:h-44 rounded-2xl [filter:blur(2.5px)] group-hover:blur-none [transition:all_.9s]' src={`http://localhost:3500/${offer.image}`} alt="" />
+            <img className='w-full h-[350px] sm:w-44 sm:h-44 rounded-2xl [filter:blur(2.5px)] group-hover:blur-none [transition:all_.9s]' src={offer.image} alt="" />
           </Link>
         </div>
           ))}
