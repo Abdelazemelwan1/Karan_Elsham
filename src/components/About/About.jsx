@@ -10,10 +10,12 @@ import { FaUserGraduate } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import UseTitle from './../UseTitle/UseTitle';
 
 
 
 export default function About() {
+  UseTitle('عن المطعم');
     useEffect(() => {
    AOS.init({duration: 1500})
   }, [])
@@ -81,8 +83,8 @@ export default function About() {
 
 
 
-      <div className='grid max-w-[90%] md:max-w-[75%] gap-5 my-9 m-auto'>
-        <div data-aos="zoom-in" className='group text-[#F3F3F6] shadow-2xl rounded-[7px] py-[31px] px-2.5 xl:px-[33px] text-center space-y-2 hover:scale-105 [transition:all_.4s]'>
+      <div className='grid max-w-[90%] md:max-w-[75%] gap-5 my-9 m-auto hover:scale-105 [transition:all_.4s]'>
+        <div data-aos="zoom-in" className='group text-[#F3F3F6] shadow-2xl rounded-[7px] py-[31px] px-2.5 xl:px-[33px] text-center space-y-2 '>
           <h1 className='font-bold text-[22px] text-black'> بادر بالحجز</h1>
           <h3 className='mb-5 font-semibold text-[16px] text-black'> احجز طاولتك الآن واستمتع بأشهى الأطباق في أجواء راقية وأنيقة.</h3>
           <Link to={"/"} className="  px-4 py-2 bg-gray-700 rounded-xl">أحجز الآن </Link>

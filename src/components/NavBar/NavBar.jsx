@@ -46,10 +46,7 @@ export default function NavBar() {
         <li><NavLink className='bordlogo relative text-xl md:text-2xl' to={"/contact"}> تواصل معنا </NavLink></li>
       </ul>
       </div> */}
-<div className=' xxx'>
 
-<NasvLink/>
-</div>
 
 
     </nav>

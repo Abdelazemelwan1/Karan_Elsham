@@ -6,8 +6,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import UseTitle from '../UseTitle/UseTitle.jsx';
 
 export default function Menu() {
+    UseTitle(' المنيو');
+  
     const [recipes, setRecipes] = useState([])
   
     
@@ -77,30 +80,15 @@ let filterion = recipes.filter((day) => {
     </Swiper></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div className="container max-w-[90%]   sm:max-w-[36rem] md:max-w-[45rem] lg:max-w-[62rem]  xl:max-w-[74rem]  2xl:max-w-[88rem]  mx-auto mt-[70px]">
-        <form class="max-w-full  mx-auto my-9">   
-          <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-          <div class="relative">
-            <input  onChange={(e) => setSearch(e.target.value)} type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ابحث عن أكلتك المفضلة" required />
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        <form className="max-w-full  mx-auto my-9">   
+          <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+          <div className="relative">
+            <input  onChange={(e) => setSearch(e.target.value)} type="search" id="default-search" className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ابحث عن أكلتك المفضلة" required />
+            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z">
+                  </path>
                 </svg>
             </div>
           </div>
@@ -108,7 +96,7 @@ let filterion = recipes.filter((day) => {
         <div className='grid grid-cols-1 w-full'>
           {filterion.length > 0 ?
           filterion?.map((day) => (
-            <div>
+            <div key={day.id}>
               <h2 id={`menu${day.id}`} className="font-bold text-3xl border-4 border-transparent border-b-white w-fit px-4 mx-auto mb-4 py-2 pt-6">{day.category}</h2>
 
         <div className=' grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4'>

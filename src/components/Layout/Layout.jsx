@@ -3,19 +3,18 @@ import Style from "./Layout.module.css"
 import NavBar from './../NavBar/NavBar';
 import { Outlet, ScrollRestoration } from 'react-router-dom';
 import Footer from './../Footer/Footer';
+import NasvLink from '../NasvLink/NasvLink';
 
 
 
 export default function Layout() {
   return <>
-  {/* <div className='fixed  left-0 right-0 z-30'> */}
-        <ScrollRestoration />
-
+    <ScrollRestoration />
    <NavBar/>
-  {/* </div> */}
-
+   <div  className=' xxx  bg-[#F8B83A] shadow-2xl'>
+      <NasvLink/>
+    </div>
    <Outlet/>
-   {/* </div> */}
    <Footer/>
   </>
 }

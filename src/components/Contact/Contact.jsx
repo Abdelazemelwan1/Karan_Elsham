@@ -4,10 +4,13 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 import { FiPhoneCall } from 'react-icons/fi'
 import { MdOutlineMail } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import UseTitle from '../UseTitle/UseTitle'
 
 
 
 export default function Contact() {
+    UseTitle(' تواصل معنا');
+  
   return <>
   <div className=' max-w-[90%] sm:max-w-[36rem] md:max-w-[44rem] lg:max-w-[60rem]  xl:max-w-[74rem]  2xl:max-w-[82rem] container mx-auto'>
 

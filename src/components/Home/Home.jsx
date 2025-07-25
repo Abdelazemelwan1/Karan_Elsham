@@ -3,19 +3,18 @@ import Style from "./Home.module.css"
 import Elsohap from "../../assets/_16750278866235610 (1).jpeg"
 import { Link } from 'react-router-dom';
 import api from "../../api/recipes.js";
-// import { FaStar } from 'react-icons/fa';
-// import { FaStar } from 'react-icons/fa';
-// import { FaRegStarHalfStroke, FaStarHalfStroke } from 'react-icons/fa6';
-// import { FaStar } from 'react-icons/fa';
 import { FaStar } from "react-icons/fa";
 import { FaRegStarHalfStroke } from 'react-icons/fa6';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import UseTitle from '../UseTitle/UseTitle.jsx';
 
 
 
 export default function Home() {
+    UseTitle("الرئيسية");
+  
   const [offers, setOffers] = useState([])
 
 async function callApi() {
@@ -55,10 +54,6 @@ useEffect(() => {
           {offers.map((offer) => (
 
 
-// data-aos="fade-down"
-//      data-aos-easing="linear"
-//      data-aos-duration="1500"
-            
             <div {...(offer.id % 2 === 0 ?  { 'data-aos': 'fade-up' } 
               : {'data-aos': 'fade-down' ,
                'data-aos-easing' : 'linear',
